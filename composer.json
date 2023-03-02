@@ -18,7 +18,8 @@
         "ext-libxml":"*",
         "ext-mbstring":"*",
         "symfony/dom-crawler":"^6",
-        "symfony/css-selector":"^6"
+        "symfony/css-selector":"^6",
+        "ext-iconv": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^9",
