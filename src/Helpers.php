@@ -87,7 +87,7 @@ class Helpers {
                 array_map('strtolower', mb_list_encodings())
             )
         ) {
-            $html = htmlspecialchars_decode(iconv($charset, 'ISO-8859-1', htmlentities($html, ENT_COMPAT, $charset)), ENT_QUOTES);
+            $html = htmlspecialchars_decode(mb_convert_encoding(htmlentities($html, ENT_COMPAT, $charset, false), 'UTF-8', mb_list_encodings()));
         }
         @$d->loadHTML($html);
         libxml_use_internal_errors($current);
